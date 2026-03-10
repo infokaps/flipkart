@@ -1,0 +1,1584 @@
+:root {
+    --fk-blue: #003c9d;
+    --sky-blue: white; 
+    --text-muted: #717478;
+    --fk-yellow: #ffd814;
+}
+
+body { 
+    margin: 0; 
+    font-family: 'Roboto', sans-serif; 
+    background-color: #f1f3f6; 
+}
+
+
+.offer-header { 
+    background: var(--fk-blue); 
+    color: white; 
+    padding: 12px 16px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.header-left { display: flex; align-items: center; gap: 10px; }
+.wow-badge { background: var(--fk-yellow); color: black; font-size: 8px; font-weight: 900; padding: 2px 5px; border-radius: 2px; text-align: center; line-height: 1; }
+.price-box-header { font-size: 15px; }
+
+/* PRICE SECTION: Transparent so sky-blue shows through */
+.price-section-transparent {
+    padding: px 5px 5px; 
+    display: flex;
+    align-items: center;
+}
+
+.buy-at-text { font-size: 17px; font-weight: 700; color: #212121; }
+
+/* BANK OFFERS CARD: Remains white */
+
+
+.drawer-content { 
+   
+    max-height: 0; 
+    overflow: hidden; 
+    transition: max-height 0.5s ease-in-out; 
+}
+
+.drawer-content.is-open { max-height: 2000px; }
+
+.section-label { 
+    padding: 0 16px 10px; 
+    font-size: 14px; 
+    color: var(--text-muted); 
+    font-weight: 700; 
+    margin: 0;
+}
+
+
+
+
+.horizontal-scroll::-webkit-scrollbar { display: none; }
+
+.offer-card { 
+    flex: 0 0 240px; 
+    border: 1px solid #e0e0e0; 
+    border-radius: 12px; 
+    background: white;
+    position: relative;
+}
+
+.best-value { border-color: #fbd163; background: #fffcf5; }
+
+
+.card-top { 
+    padding: px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+.bank-info-group { display: flex; align-items: center; gap: 10px; }
+.bank-logo { font-weight: 900; font-size: 11px; }
+.discount-amt1 { font-size: 16px; font-weight: 700; display: block; }
+.bank-id { font-size: 11px; color: var(--text-muted); }
+
+.apply-btn { 
+    margin-right: 5px;
+    color: #2874f0; 
+    font-weight: 700; 
+    border: none; 
+    background: none; 
+    cursor: pointer; 
+    font-size: 14px; 
+}
+
+.card-bottom { 
+    background: #f0efef; 
+    border-top: 1px solid #f2f2f2; 
+    padding: 8px 12px; 
+    font-size: 11px; 
+    border-radius: 0 0 12px 12px; 
+}
+
+.chevron { font-size: 18px; transition: 0.3s transform; }
+.rotate { transform: rotate(180deg); }
+
+
+
+/* Header styling for new sections */
+.card-header-flex { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 2px 2px; 
+}
+
+.small-chevron { color: #878787; font-size: 14px; }
+
+/* EMI Card specific styling */
+.emi-card {
+    flex: 0 0 280px; 
+    border: 1px solid #e0e0e0; 
+    border-radius: 12px; 
+    padding: 4px;
+    background: #fff;
+}
+
+.emi-content { display: flex; gap: 10px; align-items: flex-start; position: relative; }
+.emi-img { font-size: 20px; }
+.emi-details { flex: 1; display: flex; flex-direction: column; }
+.emi-title { font-size: 13px; font-weight: 700; color: #212121; line-height: 1.4; }
+.emi-sub { font-size: 11px; color: #878787; margin: 4px 0; }
+.emi-btn { 
+    color: #2874f0; background: none; border: none; 
+    font-weight: 700; text-align: left; padding: 0; cursor: pointer; font-size: 13px;
+}
+.card-thumb { width: 40px; border-radius: 4px; }
+
+/* Benefit Pills/Tags styling */
+.benefit-tag {
+    flex: 0 0 auto; 
+    display: flex; 
+    align-items: center; 
+    background: #fff; 
+    border: 1px solid #e0e0e0; 
+    padding: 8px 14px; 
+    border-radius: 25px; 
+    gap: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.percent-icon { 
+    color: #c300c3; /* Magenta/Purple color from video */
+    font-weight: 900; 
+    font-size: 14px;
+}
+
+.benefit-text { font-size: 12px; color: #212121; font-weight: 500; }
+.benefit-arrow { color: #878787; font-size: 14px; font-weight: bold; }
+
+
+
+/* Delivery Section Wrapper */
+.delivery-details-container {
+    padding: 5px 8px;
+    background: #fff;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 7px;
+    margin-top: 7px;
+    color: #212121;
+}
+
+/* Gray Info Box */
+.delivery-info-box {
+    background-color: #f5f7fa; /* Light gray background */
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 2px;
+    background:rgb(239, 237, 237);
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.info-left {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.info-text {
+    font-size: 14px;
+    color: #212121;
+    line-height: 1.4;
+}
+
+.seller-stats {
+    display: flex;
+    gap: 6px;
+    font-size: 12px;
+    color: #878787;
+    margin-top: 2px;
+}
+
+.rating {
+    background:rgb(183, 182, 182);
+    color: white;
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-size: 10px;
+}
+
+.arrow { color: #878787; font-weight: bold; }
+
+/* Badges (Icons at bottom) */
+.badges-row {
+    padding-left: 2px;
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #f0f0f0;
+}
+
+.badge-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 33%;
+}
+
+.badge-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+/* Custom Icon Styles */
+.icon-circle { border: 2px solid #2874f0; border-radius: 50%; color: #2874f0; font-weight: 900; }
+.icon-square { border: 2px solid #2874f0; border-radius: 4px; color: #2874f0; font-weight: bold; }
+.icon-shield { font-size: 24px; }
+
+.badge-label {
+    font-size: 11px;
+    font-weight: 500;
+    color: #212121;
+}
+
+
+
+
+
+.reviews-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.up-arrow-btn {
+    background: #f0f0f0;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    transform: rotate(180deg);
+    cursor: pointer;
+}
+
+.rating-summary .big-rating {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.rating-summary .rating-label {
+    color: #388e3c;
+    font-weight: 600;
+    margin-left: 8px;
+}
+
+.verified-text {
+    font-size: 12px;
+    color: #878787;
+    margin: 4px 0 4px;
+}
+
+/* Review Image Grid */
+.review-image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-bottom: 5px;
+}
+
+.review-img-box {
+    position: relative;
+    aspect-ratio: 1;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+}
+
+.review-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.more-images .overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+/* Feature Pills */
+.feature-ratings {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    
+}
+
+.feature-pill {
+    background:rgb(239, 237, 237);
+    border: 1px solid #e0f0ff;
+    border-radius: 100px;
+    padding: 6px 12px;
+    font-size: 12px;
+    color: #212121;
+}
+
+.feature-pill span {
+    font-weight: 700;
+    margin-left: 4px;
+}
+
+/* Review Cards */
+.reviews-list {
+    gap: 12px;
+    padding-bottom: 16px;
+}
+
+.review-card {
+    flex: 0 0 280px;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    padding: 4px;
+    background: #fff;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 2px;
+}
+
+.star-badge {
+    background: #388e3c;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.review-title {
+    font-size: 13px;
+    font-weight: 700;
+    flex: 1;
+}
+
+.review-date {
+    font-size: 11px;
+    color: #878787;
+}
+
+.review-body {
+    font-size: 13px;
+    color: #212121;
+    line-height: 1.4;
+    margin-bottom: 1px;
+    margin-top: 1px;
+}
+
+.horizontal-scroll reviews-list{
+    margin-top: 1px;
+}
+
+.reviewer-info {
+    font-size: 11px;
+    color: #878787;
+}
+
+.reviewer-name {
+    display: block;
+    color: #212121;
+    font-weight: 500;
+}
+
+.verified-badge {
+    color: #878787;
+}
+
+.thumbs-section {
+    margin-top: 8px;
+    display: flex;
+    gap: 12px;
+}
+
+/* Show All Button */
+.show-all-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 94%;
+
+    padding: 10px 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #212121;
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.chevron-right {
+    color: #878787;
+}
+
+.header-left {
+    display: flex;
+    align-items: center; /* This keeps image and text vertically centered */
+    gap: 10px;
+}
+
+.wow-deal-img {
+    height: 22px;        /* Matches the height of the previous text box */
+    width: auto;         /* Maintains original aspect ratio */
+    object-fit: contain;
+    display: block;
+    border-radius: 15px solid #003c9d;
+}
+
+.price-box-header {
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+}
+
+
+/* 1. Root Variables for easy management */
+:root {
+    --fk-blue: #003c9d;
+    --sky-blue: #D8EEFE; /* The exact blue from your image */
+    --fk-text: #212121;
+    --fk-gray: #878787;
+}
+
+/* 2. Page & Container Setup */
+body {
+    
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff; /* Entire page is white */
+}
+
+
+
+/* 3. Header Styling */
+.offer-header {
+    background: var(--fk-blue);
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.wow-deal-img {
+    height: 24px; /* Adjust to fit your screenshot image */
+    width: auto;
+}
+
+/* 4. Price Section (Transparent so sky blue shows) */
+.price-section-transparent {
+    padding: 10px 16px 8px;
+}
+
+#buy-at-text {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--fk-text);
+}
+
+/* 5. White Card Styling (The inner divs) */
+
+
+/* 6. Bank Offers Horizontal/Grid Logic */
+.rows-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.horizontal-scroll {
+    display: flex;
+    overflow-x: auto;
+    padding: 0px 5px;
+    gap: 12px;
+    scrollbar-width: none;
+    
+    
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.offer-card {
+    flex: 0 0 240px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background: white;
+}
+
+/* 7. Ratings & Reviews (Outside the sky blue container) */
+.ratings-reviews-container {
+    padding: 5px;
+    background: #fff;
+    border-top: 5px solid #f1f3f6; /* Divider from the app container */
+}
+
+/* Additional layout fix for the card header in EMI section */
+.card-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2px 2px;
+}
+
+.section-label {
+   
+    
+    font-size: 14px;
+    color: var(--fk-gray);
+    font-weight: 700;
+    margin: 0;
+}
+
+.app-container { 
+    width: calc(100% - 20px); /* Subtracts the total side margins (10px + 10px) */
+    max-width: 450px; 
+    margin: 7px 10px;        /* 20px Top/Bottom, 10px Left/Right */
+    background-color: var(--sky-blue); 
+    height: auto;               
+    border: 2px solid #2874f0;      
+    box-sizing: border-box; 
+    border-radius: 16px; 
+    overflow: hidden; 
+}
+
+
+
+/* 1. The White Card Container */
+.white-card {
+    margin-left: 10px;
+    background: #ffffff;
+    margin: 0 0 12px 0;
+    border-radius: 12px;
+    padding: 16px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    /* FIX: Ensure this doesn't clip children */
+    overflow: visible !important; 
+}
+
+/* 2. The Horizontal Scroll Area */
+.horizontal-scroll {
+    display: flex; 
+    overflow-x: auto; 
+    /* FIX: 15px top padding creates room for the tag */
+    padding: 15px 16px 10px 0; 
+    gap: 12px;
+    scrollbar-width: none;
+    /* FIX: Allow tags to pop out of the top */
+    overflow-y: visible !important; 
+}
+.horizontal-scroll::-webkit-scrollbar { display: none; }
+
+/* 3. The Individual Offer Card */
+.offer-card { 
+    flex: 0 0 240px; 
+    border: 1px solid #e0e0e0; 
+    border-radius: 12px; 
+    background: white;
+    position: relative;
+    /* FIX: Allow the absolute positioned tag to show */
+    overflow: visible !important; 
+}
+
+/* 4. The "Best Value" Tag */
+.top-tag { 
+    position: absolute; 
+    /* FIX: Positioned slightly higher */
+    top: -15px; 
+    left: 10px; 
+    background: #fdf1c5; 
+    border: 1px solid #fbd163; 
+    font-size: 10px; 
+    padding: 2px 8px; 
+    border-radius: 4px; 
+    font-weight: 700; 
+    /* FIX: Keep it above everything else */
+    z-index: 20; 
+    white-space: nowrap;
+}
+
+.best-value { 
+    border-color: #fbd163; 
+    background: #fffcf5; 
+}
+
+
+
+/* 1. Updated White Card with side margins */
+.white-card {
+    background: #ffffff;
+    /* 0 top, 2px right, 12px bottom, 2px left */
+    margin: 0 2px 12px 2px; 
+    border-radius: 12px;
+    padding: 16px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    /* Essential for the "Best Value" tag to show */
+    overflow: visible !important; 
+}
+
+/* 2. Adjusted Scroll Padding */
+.horizontal-scroll {
+    display: flex; 
+    overflow-x: auto; 
+    /* 15px top for tag, 16px right, 10px bottom, 12px left */
+    /* Left padding ensures cards don't touch the white-card's edge immediately */
+    padding: 15px 16px 3px 6px; 
+    gap: 10px;
+    scrollbar-width: none;
+    overflow-y: visible !important; 
+}
+
+/* 3. Header and Label Alignment */
+/* Since you want text to start from the left, we use padding inside the white card */
+.card-header-flex, 
+.section-label {
+    padding-left: 12px; /* Small padding so text doesn't touch the 2px blue gap */
+    padding-right: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 4. Keep the tag visible */
+.offer-card { 
+    flex: 0 0 240px; 
+    border: 1px solid #e0e0e0; 
+    border-radius: 12px; 
+    background: white;
+    position: relative;
+    overflow: visible !important; 
+}
+
+
+
+.white-card {
+    background: #ffffff;
+    /* Order: Top (0), Right (10px), Bottom (12px), Left (10px) */
+    margin: 0 8px 10px 8px; 
+    border-radius: 12px;
+    padding: px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    /* Keeps the "Best Value" tag visible */
+    overflow: visible !important; 
+}
+
+
+/* Container for the whole section to show sky blue background */
+.sky-blue-wrapper {
+    background-color: white;
+    padding: 2px 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Common Header Style */
+.promo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 4px;
+    
+}
+
+.promo-title {
+    padding-left: 7px;
+    font-size: 12px;
+    font-weight: 550;
+    color: #2e2e2e;
+    margin: 0;
+}
+
+.promo-toggle-icon {
+    color: #878787;
+    font-size: 14px;
+    transform: rotate(180deg);
+}
+
+/* --- 1. APPLY FOR CARD SECTION --- */
+.promo-card-container {
+    background: #f0efef;
+    margin: 0 5px 6px 10px; /* Adjust side margins here */
+    border-radius: 12px;
+    padding-bottom: 2px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    margin-top: 7px;
+    margin-bottom: 8px;
+}
+
+.promo-scroll-box {
+    display: flex;
+    overflow-x: auto;
+    gap: 12px;
+    padding: 0 12px;
+    scrollbar-width: none;
+}
+
+.promo-scroll-box::-webkit-scrollbar { display: none; }
+
+.bank-promo-item {
+    flex: 0 0 280px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 1px;
+}
+
+.bank-promo-content {
+   
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.bank-card-img {
+    width: 45px;
+    height: auto;
+    border-radius: 4px;
+    align-items: center;
+    margin-top: 11.3px;
+    margin-left: 8px;
+}
+
+.promo-main-desc {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 0 0px 0;
+    color: #212121;
+}
+
+.promo-sub-desc {
+    font-size: 12px;
+    color: #878787;
+    margin: 0 0 0px 0;
+}
+
+.promo-apply-btn {
+    color: #2874f0;
+    background: none;
+    border: none;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* --- 2. ADDITIONAL BENEFITS SECTION --- */
+.benefits-card-container {
+    background:rgb(239, 237, 237);
+    margin: 0 10px 0px 10px; /* Adjust side margins here */
+    border-radius: 12px;
+    padding-bottom: 5px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.benefits-scroll-box {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 0 12px;
+    scrollbar-width: none;
+}
+.img1{
+    padding-top: 4px;
+    
+}
+
+.benefits-scroll-box::-webkit-scrollbar { display: none; }
+
+.benefit-pill-item {
+    flex: 0 0 auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 25px;
+    padding: 5px 1px;
+    background-color: #fff;
+}
+
+.benefit-pill-content {
+    padding-left: 7px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pill-discount-icon {
+    color: #c300c3; /* Magenta color from video */
+    font-weight: 900;
+    font-size: 14px;
+}
+
+.pill-label-text {
+    font-size: 13px;
+    color: #212121;
+    font-weight: 400;
+}
+
+.pill-arrow-icon {
+    color: #878787;
+    font-size: 12px;
+    margin-left: 4px;
+}
+
+
+/* Container for the whole line */
+.reviewer-info {
+    display: flex;
+    justify-content: space-between; /* Pushes content to opposite ends */
+    align-items: center;            /* Vertically centers text and buttons */
+    margin-top: 10px;
+    padding-top: 8px;
+    border-top: 1px solid #f0f0f0;
+}
+
+/* Left side: Name and Verified badge */
+.reviewer-details-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.reviewer-name {
+    font-size: 12px;
+    font-weight: 500;
+    color: #212121;
+}
+
+.verified-badge {
+    font-size: 11px;
+    color: #878787;
+}
+
+/* Right side: Thumbs buttons */
+.thumbs-actions-right {
+    display: flex;
+    gap: 15px; /* Space between Like and Dislike */
+}
+
+.thumb-btn {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    color: #878787;
+    cursor: pointer;
+    padding: 0;
+}
+
+.thumb-icon {
+    font-size: 14px;
+}
+
+/* Hover effect for buttons */
+.thumb-btn:hover {
+    color: #2874f0;
+}
+
+:root {
+            --fk-blue: #2874f0;
+            --fk-bg: #f1f3f6;
+            --fk-card: #ffffff;
+            --fk-dark: #0f172a;
+            --fk-green: #16a34a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter", system-ui, sans-serif;
+            background: var(--fk-bg);
+            color: var(--fk-dark);
+            padding-bottom: 90px;
+        }
+
+        .header-container {
+            background: var(--fk-blue);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 8px 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+        }
+
+        .fk-navbar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .fk-btn-icon {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .fk-btn-icon svg path {
+            stroke: #fff;
+            fill: none;
+            stroke-width: 2;
+        }
+
+        .fk-logo img {
+            height: 20px;
+            display: block;
+        }
+
+        .fk-search {
+            flex: 1;
+            position: relative;
+            background: #fff;
+            border-radius: 2px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+        }
+
+        .fk-search input {
+            width: 100%;
+            height: 100%;
+            border: none;
+            outline: none;
+            padding: 0 30px 0 10px;
+            font-size: 14px;
+            background: transparent;
+        }
+
+        .fk-search .sicon {
+            position: absolute;
+            right: 8px;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .fk-search .sicon svg path {
+            stroke: #2874f0;
+            stroke-width: 2;
+        }
+
+        .main-wrapper {
+            max-width: 560px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .card {
+            background: #fff;
+            margin-bottom: 8px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+            border: none;
+            border-radius: 0;
+        }
+
+        .carousel {
+            background: #fff;
+            position: relative;
+        }
+
+        .carousel-inner {
+            width: 100%;
+            background: #fff;
+        }
+
+        .carousel-item {
+            height: 380px;
+            background: #fff;
+            text-align: center;
+        }
+
+        .carousel-item img {
+            max-height: 100%;
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            margin: 0 auto;
+            object-fit: contain;
+            padding: 20px;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .carousel-indicators {
+            bottom: 0;
+            margin-bottom: 10px;
+        }
+
+        .carousel-indicators [data-bs-target] {
+            background-color: #c2c2c2;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            border: none;
+            margin: 0 4px;
+            opacity: 1;
+        }
+
+        .carousel-indicators .active {
+            background-color: #2874f0;
+            width: 8px;
+            height: 8px;
+        }
+
+        .thumb-bar {
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 12px;
+            background: #fff;
+            border-top: 1px solid #f0f0f0;
+            scrollbar-width: none;
+        }
+
+        .thumb-bar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .thumb-item {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            margin-right: 8px;
+            padding: 4px;
+            cursor: pointer;
+            vertical-align: middle;
+            position: relative;
+        }
+
+        .thumb-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .thumb-item.active {
+            border: 2px solid #2874f0;
+        }
+
+        .p-title {
+            font-size: 16px;
+            padding: 12px 12px 0;
+            line-height: 1.4;
+            color: #212121;
+        }
+
+        .p-rating {
+            padding: 6px 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .rating-badge {
+            background: #388e3c;
+            color: #fff;
+            font-size: 12px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 2px;
+        }
+
+        .p-price-box {
+            padding: 0 12px 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .sp {
+            font-size: 22px;
+            font-weight: 700;
+            color: #212121;
+        }
+
+        .mrp {
+            font-size: 14px;
+            color: #878787;
+            text-decoration: line-through;
+        }
+
+        .disc {
+            font-size: 14px;
+            color: #388e3c;
+            font-weight: 700;
+        }
+
+        .offer-timer {
+            padding: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #fff;
+        }
+
+        .timer-icon svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .timer-txt {
+            font-weight: 600;
+            color: #000;
+            font-size: 14px;
+        }
+
+        .timer-red {
+            color: #ff4d4d;
+            font-weight: 700;
+        }
+
+        .features-box {
+            padding: 16px;
+            background: #fff;
+        }
+
+        .f-head {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #212121;
+        }
+
+        .f-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .f-item {
+            display: flex;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #212121;
+            line-height: 1.4;
+        }
+
+        
+
+        .details-box {
+            padding: 16px;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #212121;
+        }
+
+        .f-img-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        
+
+        .f-img-item:first-child {
+            grid-column: 1 / -1;
+            
+        }
+
+        .sim-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            padding: 10px;
+        }
+
+        .sim-item {
+            border: 1px solid #a6a4a4;
+            border-radius: 4px;
+            padding: 8px;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            text-decoration: none;
+            color: inherit;
+            width: 125px;
+        }
+
+        .sim-img {
+            width: 100%;
+            height: 120px;
+            object-fit: contain;
+            margin-bottom: 4px;
+        }
+
+        .sim-title {
+            font-size: 13px;
+            font-weight: 500;
+            color: #212121;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .sim-price {
+            font-weight: 700;
+            font-size: 14px;
+            color: #212121;
+        }
+
+        /* Review CSS */
+        .review-item {
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .review-item:last-child {
+            border-bottom: none;
+        }
+
+        .r-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 6px;
+        }
+
+        .r-star {
+            background: #388e3c;
+            color: #fff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 2px;
+        }
+
+        .r-name {
+            font-weight: 600;
+            font-size: 13px;
+            color: #212121;
+        }
+
+        .r-text {
+            font-size: 13px;
+            color: #212121;
+            line-height: 1.4;
+        }
+
+        .r-footer {
+            margin-top: 6px;
+            font-size: 11px;
+            color: #878787;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .r-check {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 11px;
+            color: #878787;
+        }
+
+        .r-check svg {
+            fill: #878787;
+            width: 12px;
+            height: 12px;
+        }
+
+        .fk-bottom-bar {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 9999;
+            background: rgba(255, 255, 255, .98);
+            backdrop-filter: blur(5px);
+            display: flex;
+            align-items: center;
+            padding: 8px 10px;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, .1);
+            justify-content: center;
+        }
+
+        .fk-bottom-inner {
+            max-width: 560px;
+            width: 100%;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .fk-cart-mini {
+            width: 52px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #e0e0e0;
+            background: #fff;
+            flex-shrink: 0;
+        }
+
+        .fk-cart-mini svg {
+            width: 24px;
+            height: 24px;
+            fill: none;
+            stroke: #212121;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .fk-emi-btn {
+            flex: 1;
+            height: 50px;
+            border-radius: 18px;
+            border: 1px solid #e0e0e0;
+            background: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+            padding: 0;
+            cursor: not-allowed;
+            opacity: 0.8;
+        }
+
+        .fk-emi-top {
+            font-size: 14px;
+            font-weight: 600;
+            color: #212121;
+        }
+
+        .fk-emi-sub {
+            font-size: 10px;
+            font-weight: 500;
+            color: #878787;
+        }
+
+        .fk-buy-btn {
+            flex: 1.2;
+            height: 50px;
+            border-radius: 18px;
+            border: none;
+            background: linear-gradient(135deg, #ffb703, #fb8500);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
+        }
+
+        .fk-buy-top {
+            font-size: 15px;
+            font-weight: 700;
+            color: #212121;
+        }
+
+        .fk-buy-sub {
+            font-size: 11px;
+            font-weight: 600;
+            color: #212121;
+        }
+
+        .sim-grid {
+            display: flex;
+            gap: 10px;
+            padding: 10px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+        }
+
+        .sim-grid::-webkit-scrollbar {
+            display: none;
+        }
+
+        .sim-item {
+            min-width: 40px;
+            flex: 0 0 auto;
+        }
+
+        .price-box-header {
+
+            font-size: 12.7px;
+
+        }
+
+        #featureSection {
+            margin-top: 7px;
+        }
+
+
+
+        /* Make all review items appear in one horizontal row */
+        #fakeReviewsContainer {
+            display: flex;
+            gap: 15px;
+            /* space between reviews */
+            overflow-x: auto;
+            /* allow scroll if many reviews */
+            padding-top: 10px;
+        }
+
+        /* Each review card */
+        #fakeReviewsContainer .review-item {
+            min-width: 250px;
+            /* fixed width for each review */
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 8px;
+            flex-shrink: 0;
+            /* prevent shrinking */
+        }
+
+        /* Rating badge inside review */
+        #fakeReviewsContainer .review-rating {
+            background: #388e3c;
+            color: #fff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 6px;
+        }
+
+        /* Review text */
+        #fakeReviewsContainer .review-text {
+            font-size: 13px;
+            color: #333;
+        }
+
+        .size-option {
+            padding: 8px 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            background: white;
+            min-width: 45px;
+            text-align: center;
+        }
+
+        .size-option.selected {
+            border: 2px solid #2874f0;
+            color: #2874f0;
+            background: #ffffff;
+        }
+
+
+        
+
+        .f-img-item {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}.video-wrapper {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-top: 10px;
+}
+
+.video-item {
+    min-width: 220px;
+}
+
+.video-item video {
+    width: 100%;
+    border-radius: 8px;
+}
+.review-img {
+    width: 100%;
+    max-width: 220px;
+    margin-top: 8px;
+    border-radius: 8px;
+}
+
+.review-image-section {
+    margin-bottom: 8px;
+    margin-top: 25px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+}
+
+.review-image-section h3 {
+    margin-bottom: 10px;
+}
+
+.review-image-box {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.review-main-img {
+    width: 350px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.review-caption {
+    font-size: 14px;
+    color: #555;
+}

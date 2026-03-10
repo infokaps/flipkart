@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Online Shopping Site for Mobiles, Electronics, Furniture, Grocery ...</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,user-scalable=no">
+    <meta name="theme-color" content="#2874f0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="img/small-logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/product3.css">
+    <style>
+
+    </style>
+</head>
+
+
+<body>
+
+    <div class="main-wrapper">
+
+
+        <div class="container-fluid py-2 header-container" style="background-color:#2874f0">
+            <div class="row header">
+                <div class="col-1">
+                    <div class="menu-icon" id="back_btn">
+                        <svg width="19" height="16" viewBox="0 0 19 16" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.556 7.847H1M7.45 1L1 7.877l6.45 6.817" stroke="#FFF" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="menu-logo">
+                        <a class="Z4_K_h" href="#" style="width:85px"><img width="85px" src="images/logo.webp"></a>
+                    </div>
+                </div>
+                <div class="col-6">
+                </div>
+                <div class="col-1">
+                    <div class="menu-icon">
+                        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                            <g fill="#FFF" fill-rule="evenodd">
+                                <path
+                                    d="m11.618 9.897l4.225 4.212c.092.092.101.232.02.313l-1.465 1.46c-.081.081-.221.072-.314-.02l-4.216-4.203" />
+                                <path
+                                    d="m6.486 10.901c-2.42 0-4.381-1.956-4.381-4.368 0-2.413 1.961-4.369 4.381-4.369 2.42 0 4.381 1.956 4.381 4.369 0 2.413-1.961 4.368-4.381 4.368m0-10.835c-3.582 0-6.486 2.895-6.486 6.467 0 3.572 2.904 6.467 6.486 6.467 3.582 0 6.486-2.895 6.486-6.467 0-3.572-2.904-6.467-6.486-6.467" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="col-1">
+                    <div class="menu-icon">
+                        <svg width="16" height="16" viewBox="0 0 15 15"
+                            xmlns="external452e452e452e452e452e.html?link=http://www.w3.org/2000/svg">
+                            <g fill="#fff" fill-rule="evenodd">
+                                <path
+                                    d="m5.189 13.04c0 .996-.791 1.804-1.767 1.804-.976 0-1.767-.808-1.767-1.804 0-.996.791-1.804 1.767-1.804.976 0 1.767.808 1.767 1.804">
+                                </path>
+                                <path
+                                    d="m14.912 2.259h-14.298l2.247 6.917c.042.129.16.216.293.216h8.06c-.064.69-.629 1.841-1.702 1.841h-6.04l1.072 1.991h5.611c1.881 0 2.938-2.278 3.657-4.719.888-3.01 1.219-6.245 1.106-6.245">
+                                </path>
+                                <path
+                                    d="m.615 2.259l-.592-1.828c-.08-.207.069-.431.287-.431h1.482c.126 0 .24.079.287.198l.682 2.061c0 0-.63 1.642-1.942.066">
+                                </path>
+                                <path d="m2.262.756c0 0 .498 1.503 2.234 1.503l-1.736.749-1.104-.749.607-1.503">
+                                </path>
+                                <path
+                                    d="m13.424 13.325c0 .837-.664 1.516-1.484 1.516-.82 0-1.484-.679-1.484-1.516 0-.837.664-1.516 1.484-1.516.82 0 1.484.679 1.484 1.516">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card p-0">
+        <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner" id="carouselWrapper"></div>
+            <div class="carousel-indicators" id="carouselIndicators"></div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev"
+                style="opacity:0;width:15%;">
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next"
+                style="opacity:0;width:15%;">
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div class="thumb-bar" id="thumbWrapper"></div>
+    </div>
+
+    <div class="card">
+        <div class="p-title" id="dTitle">Loading...</div>
+        <div class="p-rating">
+            <div class="rating-badge">4.6 ★</div>
+            <span style="color:#878787;font-size:13px;">85,423 Ratings</span>
+        </div>
+        <div class="p-price-box">
+            <div class="sp" id="dSp">₹0</div>
+            <div class="mrp" id="dMrp">₹0</div>
+            <div class="disc" id="dDisc">0% off</div>
+        </div>
+    </div>
+
+
+    <div class="info-card" style="margin-top: 8px;">
+        <div
+            style="display: flex; justify-content: space-between; align-items: center; ; background: white;padding-top: 10px; padding-left: 15px;">
+            <div class="f-head" style="margin-bottom: 0;">Select Size:</div>
+            <div style="color: #2874f0; font-size: 13px; font-weight: 600; cursor: pointer; padding-right: 15px;"
+                onclick="toggleSizeChart()"><u>Size Chart</u></div>
+        </div>
+        <div class="size-container"
+            style="display: flex; gap: 5px; flex-wrap: wrap; background: white; margin-bottom: 8px; padding-bottom: 10px; padding-top: 10px; padding-left: 15px;">
+            <div class="size-option" onclick="selectSize(this)">5</div>
+            <div class="size-option" onclick="selectSize(this)">6</div>
+            <div class="size-option" onclick="selectSize(this)">7</div>
+            <div class="size-option" onclick="selectSize(this)">8</div>
+            <div class="size-option" onclick="selectSize(this)">9</div>
+            <div class="size-option" onclick="selectSize(this)">10</div>
+            <div class="size-option" onclick="selectSize(this)">11</div>
+        </div>
+    </div>
+
+    <div>
+        <div id="sizeChartModal"
+            style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8) !important; z-index: 9999; justify-content: center; align-items: center; padding: 15px;">
+
+            <div
+                style="position: relative; background-color:white !important; padding: 25px 15px 15px 15px; border-radius: 8px; width: 100%; max-width: 450px; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
+
+                <div onclick="toggleSizeChart()"
+                    style="position: absolute; top: 5px; right: 10px; cursor: pointer; color: #000 !important; font-size: 30px; font-weight: 300; line-height: 1;">
+                    &times;
+                </div>
+
+                <div
+                    style="text-align: center; font-weight: bold; margin-bottom: 10px; font-size: 16px; color: #212121;">
+                    Size Guide</div>
+
+                <img src="images/size1.png" alt="Size Chart"
+                    style="width: 100%; height: auto; display: block; border: 1px solid #f0f0f0;">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="card offer-timer">
+        <div class="timer-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+        </div>
+        <div class="timer-txt">Offer ends in <span class="timer-red" id="countdown">00:00:00</span></div>
+    </div>
+
+
+    <div class="app-container">
+        <header class="offer-header" onclick="toggleDrawer()">
+            <div class="header-left">
+                <img src="images/Screenshot 2026-02-13 195027.png" alt="WOW! DEAL" class="wow-deal-img">
+
+                <div class="price-box-header">Apply offers for maximum savings</div>
+            </div>
+            <div id="arrow" class="chevron">⌄</div>
+        </header>
+
+        <div id="drawer" class="drawer-content">
+
+            <div class="price-section-transparent">
+
+                <span class="buy-wow-price" id="buy-at-text">Buy at ₹----</span>
+            </div>
+
+
+            <div class="white-card">
+                <h3 class="section-label">Bank offers</h3>
+
+                <div class="rows-wrapper">
+                    <div id="row1" class="horizontal-scroll">
+                        <div class="offer-card best-value">
+                            <div class="top-tag">Best value for you</div>
+                            <div class="card-top">
+                                <div class="bank-info-group">
+                                    <div class="bank-logo" style="color:#f27022"><img
+                                            src="https://rukminim2.flixcart.com/www/48/48/promos/11/09/2024/2358b313-74fa-4200-a162-2766667fb0d4.png?q=90"
+                                            alt="" height="25px"></div>
+                                    <div class="bank-details">
+                                        <span class="discount-amt1">₹20 off</span>
+                                        <span class="bank-id">FLIPKART ICICI BANK</span>
+                                    </div>
+                                </div>
+                                <button class="apply-btn" onclick="handleApply(this, event)">Apply</button>
+                            </div>
+                            <div class="card-bottom">Credit, Debit, Net, UPI</div>
+                        </div>
+                        <div class="offer-card">
+                            <div class="card-top">
+                                <div class="bank-info-group">
+                                    <div class="bank-logo"><img
+                                            src="https://rukminim2.flixcart.com/www/48/48/promos/11/09/2025/812a123c-f432-42fc-9f80-502cd78ddaeb.png?q=90"
+                                            alt="" height="25px"></div>
+                                    <div class="bank-details">
+                                        <span class="discount-amt1">₹20 off</span>
+                                        <span class="bank-id">FLIPKART SBI</span>
+                                    </div>
+                                </div>
+                                <button class="apply-btn" onclick="handleApply(this, event)">Apply</button>
+                            </div>
+                            <div class="card-bottom">Credit, Debit, Net, UPI</div>
+                        </div>
+                    </div>
+
+                    <div id="row2" class="horizontal-scroll">
+                        <div class="offer-card">
+                            <div class="card-top">
+                                <div class="bank-info-group">
+                                    <div class="bank-logo" style="color:#9d0b0e"><img
+                                            src="https://rukminim2.flixcart.com/www/48/48/promos/19/08/2021/4ae2c956-e6c2-4f57-b35e-50ede0394086.png?q=90"
+                                            alt="" height="25px"></div>
+                                    <div class="bank-details">
+                                        <span class="discount-amt1">₹20 off</span>
+                                        <span class="bank-id">FLIPKART AXIS BANK</span>
+                                    </div>
+                                </div>
+                                <button class="apply-btn" onclick="handleApply(this, event)">Apply</button>
+                            </div>
+                            <div class="card-bottom">Credit, Debit, Net, UPI</div>
+                        </div>
+                        <div class="offer-card">
+                            <div class="card-top">
+                                <div class="bank-info-group">
+                                    <div class="bank-logo" style="color:blue"> <img
+                                            src="https://rukminim2.flixcart.com/www/48/48/promos/01/09/2025/5a1f9675-770e-4043-8e1c-4f246b657998.png?q=90"
+                                            alt="" height="25px"></div>
+                                    <div class="bank-details">
+                                        <span class="discount-amt1">₹20 off</span>
+                                        <span class="bank-id">FLIPKART AXIS</span>
+                                    </div>
+                                </div>
+                                <button class="apply-btn" onclick="handleApply(this, event)">Apply</button>
+                            </div>
+                            <div class="card-bottom">Credit, Debit, Net, UPI</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="sky-blue-wrapper">
+        <div class="promo-card-container">
+            <div class="promo-header">
+                <h3 class="promo-title">Apply for Card and Instant EMI</h3>
+                <span class="promo-toggle-icon"></span>
+            </div>
+
+            <div class="promo-scroll-box">
+                <div class="bank-promo-item">
+                    <div class="bank-promo-content">
+                        <img src="https://rukminim2.flixcart.com/www/30/30/promos/15/11/2024/fbb2b60c-108f-4246-af8c-b18133fe556b.png?q=90"
+                            height="25px" alt="Card" class="bank-card-img">
+                        <div class="bank-promo-text">
+                            <p class="promo-main-desc">5% Cashback | ₹3,250 Vouc...</p>
+                            <p class="promo-sub-desc">Flipkart Axis Bank Credit Card</p>
+                            <button class="promo-apply-btn">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bank-promo-item">
+                    <div class="bank-promo-content">
+                        <img src="https://rukminim2.flixcart.com/www/30/30/promos/01/09/2025/1077da09-640f-459f-bb4b-48319379d32c.png?q=90"
+                            height="25px" alt="EMI" class="bank-card-img">
+                        <div class="bank-promo-text">
+                            <p class="promo-main-desc">₹250 Gift Card | Upto ₹400*...</p>
+                            <p class="promo-sub-desc">Flipkart Bajaj Insta EMI</p>
+                            <button class="promo-apply-btn">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="benefits-card-container">
+            <div class="promo-header">
+                <h3 class="promo-title">Additional benefits on this purchase</h3>
+                <span class="promo-toggle-icon"></span>
+            </div>
+
+            <div class="benefits-scroll-box">
+                <div class="benefit-pill-item">
+                    <div class="benefit-pill-content">
+                        <span class="pill-discount-icon"><img
+                                src="https://rukminim2.flixcart.com/www/20/20/promos/18/08/2025/f1e2f14e-cb4b-40c0-8c8e-3bf5440fc70f.png?q=90"
+                                alt="" class="img1"> </span>
+                        <span class="pill-label-text">Unlock Footwear coupon • 10% off ❯</span>
+                        <span class="pill-arrow-icon"></span>
+                    </div>
+                </div>
+
+                <div class="benefit-pill-item">
+                    <div class="benefit-pill-content">
+                        <span class="pill-discount-icon"><img
+                                src="https://rukminim2.flixcart.com/www/20/20/promos/18/08/2025/f1e2f14e-cb4b-40c0-8c8e-3bf5440fc70f.png?q=90"
+                                alt="" class="img1"></span>
+                        <span class="pill-label-text">Unlock fashion coupon • 10% off ❯</span>
+                        <span class="pill-arrow-icon"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="delivery-details-container">
+        <h2 class="section-title">Delivery details</h2>
+
+        <div class="delivery-info-box">
+
+
+            <div class="info-row border-bottom">
+                <div class="info-left">
+                    <span class="icon"><svg width="15" height="16" viewBox="0 0 16 16" fill="none"
+                            style="background-color:#f5f5f5ff;margin-right:8px">
+                            <path
+                                d="M10.7852 4.62843H13.2575C13.35 4.62783 13.4405 4.65522 13.5172 4.70701C13.5938 4.7588 13.653 4.83256 13.6869 4.91861L14.4994 6.94986"
+                                stroke="#333333ff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                            <path d="M1.5 8.34277H10.7857" stroke="#333333" stroke-width="1.2" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                            <path
+                                d="M11.4827 12.5216C12.252 12.5216 12.8756 11.898 12.8756 11.1287C12.8756 10.3594 12.252 9.73584 11.4827 9.73584C10.7134 9.73584 10.0898 10.3594 10.0898 11.1287C10.0898 11.898 10.7134 12.5216 11.4827 12.5216Z"
+                                stroke="#333333ff" stroke-width="1.2" stroke-miterlimit="10"></path>
+                            <path
+                                d="M4.51786 12.5216C5.28711 12.5216 5.91072 11.898 5.91072 11.1287C5.91072 10.3594 5.28711 9.73584 4.51786 9.73584C3.7486 9.73584 3.125 10.3594 3.125 11.1287C3.125 11.898 3.7486 12.5216 4.51786 12.5216Z"
+                                stroke="#333333ff" stroke-width="1.2" stroke-miterlimit="10"></path>
+                            <path d="M10.0887 11.1284H5.91016" stroke="#333333ff" stroke-width="1.2"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path
+                                d="M3.125 11.1288H1.96429C1.84115 11.1288 1.72306 11.0799 1.63599 10.9928C1.54892 10.9057 1.5 10.7876 1.5 10.6645V4.16448C1.5 4.04134 1.54892 3.92325 1.63599 3.83618C1.72306 3.74911 1.84115 3.7002 1.96429 3.7002H10.7857V9.92163"
+                                stroke="#333333ff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                            <path
+                                d="M10.7852 6.9502H14.4994V10.6645C14.4994 10.7876 14.4505 10.9057 14.3635 10.9928C14.2764 11.0799 14.1583 11.1288 14.0352 11.1288H12.8744"
+                                stroke="#333333ff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                        </svg></span>
+                    <span class="info-text"><b>Express 2 day delivery</b></span>
+                </div>
+            </div>
+
+            <div class="info-row">
+                <div class="info-left">
+                    <span class="icon"><svg width="16" height="16" fill="none" viewBox="0 0 24 24">
+                            <path
+                                d="M4.5 13.054v6.219c0 .192.079.378.22.514.14.136.33.213.53.213h13.5c.199 0 .39-.077.53-.213a.717.717 0 0 0 .22-.514v-6.219M5.063 4h13.875c.162.001.32.053.45.148s.225.228.271.38L21 9.09H3l1.34-4.564a.737.737 0 0 1 .272-.379.775.775 0 0 1 .45-.148v0Z"
+                                stroke="#333333ff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                            <path
+                                d="M9 9.09v1.456c0 .771-.316 1.511-.879 2.056A3.048 3.048 0 0 1 6 13.455a3.048 3.048 0 0 1-2.121-.853A2.865 2.865 0 0 1 3 10.546V9.09M15 9.09v1.456c0 .771-.316 1.511-.879 2.056a3.048 3.048 0 0 1-2.121.853 3.048 3.048 0 0 1-2.121-.853A2.865 2.865 0 0 1 9 10.546V9.09M21 9.09v1.456c0 .771-.316 1.511-.879 2.056a3.048 3.048 0 0 1-2.121.853 3.048 3.048 0 0 1-2.122-.853A2.865 2.865 0 0 1 15 10.546V9.09"
+                                stroke="#333333ff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                        </svg></span>
+                    <div class="seller-details">
+                        <span class="info-text">Fulfilled by SuperComNet</span>
+                        <div class="seller-stats">
+                            <span class="rating">4.2 ★</span>
+                            <span class="years">• 9 years with Flipkart</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="badges-row">
+            <img src="images/Screenshot 2026-02-13 220021.png" alt="" height="68px" width="auto">
+        </div>
+    </div>
+
+
+
+    <div class="card features-box" id="featureSection">
+        <div class="f-head">Highlights</div>
+        <ul class="f-list" id="dFeatures"></ul>
+    </div>
+
+
+    <div class="card details-box">
+        <div class="f-head">Product Details</div>
+        <div id="dDesc"></div>
+        <div class="f-img-list" id="detailImages"></div>
+    </div>
+
+
+    <div class="card p-2">
+        <div class="f-head px-2 pt-2">Similar Products</div>
+        <div class="sim-grid" id="similarContainer"></div>
+    </div>
+
+
+    <!-- Separate Review Image Section -->
+    <section class="review-image-section">
+        <h5>Customer Review Images</h5>
+        <div id="reviewImageContainer"></div>
+    </section>
+
+    <div class="card p-3">
+        <div class="f-head" style="margin-bottom:0;">Ratings </div>
+        <div id="fakeReviewsContainer"></div>
+    </div>
+
+
+
+
+
+    <div class="card p-3" id="videoSection" style="display:none;">
+        <div class="f-head">Product Videos</div>
+        <div id="videoContainer" class="video-wrapper"></div>
+    </div>
+
+
+    </div>
+
+    <div class="fk-bottom-bar">
+        <div class="fk-bottom-inner">
+            <a onclick="buyNow();" class="fk-cart-mini" aria-label="Cart">
+                <svg viewBox="0 0 24 24">
+                    <path d="M6 6h15l-1.5 8.5H7.2L6 6z"></path>
+                    <path d="M6 6L5.2 3H2"></path>
+                    <circle cx="9" cy="20" r="1.3"></circle>
+                    <circle cx="18" cy="20" r="1.3"></circle>
+                </svg>
+            </a>
+
+            <button class="fk-emi-btn" disabled>
+                <div class="fk-emi-top">Buy with EMI</div>
+                <div class="fk-emi-sub">Not Available</div>
+            </button>
+
+            <button class="fk-buy-btn" onclick="buyNow();">
+                <div class="fk-buy-top">Buy now</div>
+                <div class="fk-buy-sub" id="bottomBuyPrice">at ₹0</div>
+            </button>
+        </div>
+    </div>
+    <script defer="" src="js/jquery.min_1.js"></script>
+
+    <script defer="" src="js/relativeTime.js"></script>
+    <script defer="" src="js/days.min.js"></script>
+    <script defer="" src="js/custom.js"></script>
+    <script defer="" src="js/cjs.js"></script>
+
+    <script src="js/jquery.min.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const fallbackProduct = {
+            id: "fallback",
+            name: "Apple iPhone 15 (Black, 128 GB)",
+            price: 66999,
+            mrp: 79900,
+            description: "Experience the dynamic island and 48MP main camera. USB-C support with A16 Bionic chip.",
+            features: "128 GB ROM|15.49 cm (6.1 inch) Super Retina XDR Display|48MP + 12MP | 12MP Front Camera|A16 Bionic Chip, 6 Core Processor",
+            images: ["./images/product.png", "./images/product.png"]
+        };
+
+        function getParam(k) {
+            return new URLSearchParams(window.location.search).get(k) || "";
+        }
+
+        function safeParse(j) {
+            try {
+                return JSON.parse(j)
+            } catch (e) {
+                return null
+            }
+        }
+
+        function inr(v) {
+            return "₹" + Number(v || 0).toLocaleString("en-IN");
+        }
+
+        function fixUrl(u) {
+            if (!u) return "";
+            u = String(u).trim();
+            if (u.startsWith("http") || u.startsWith("./") || u.startsWith("/")) return u;
+            return "./" + u;
+        }
+
+        function initTimer() {
+            let t = 1800;
+            setInterval(() => {
+                t--;
+                if (t < 0) t = 1800;
+                let m = Math.floor(t / 60),
+                    s = t % 60;
+                document.getElementById("countdown").innerText =
+                    (m < 10 ? "0" + m : m) + ":" + (s < 10 ? "0" + s : s);
+            }, 1000);
+        }
+
+        function renderSimilar(all, currentId) {
+            let cont = document.getElementById("similarContainer");
+            if (!all || !all.length) {
+                cont.innerHTML = "No products";
+                return;
+            }
+
+            let filtered = all.filter(x => String(x.id) !== String(currentId));
+
+            // Changed slice(0, 5) to slice(0, 6) for 6 products
+            let shuffled = filtered.sort(() => 0.5 - Math.random()).slice(0, 6);
+
+            cont.innerHTML = "";
+            shuffled.forEach(p => {
+                let img = p.image || p.img1 || "./images/product.png";
+                let el = document.createElement("a");
+                el.className = "sim-item";
+                el.href = "?productId=" + p.id;
+                el.innerHTML = `
+           <img src="${fixUrl(img)}" class="sim-img" alt="Product">
+           <div class="sim-title">${p.name || p.title}</div>
+           <div class="sim-price">${inr(p.selling_price || p.price)}</div>
+         `;
+                cont.appendChild(el);
+            });
+        }
+
+        // --- Fake Reviews Generator (10 Random Reviews) ---
+        function renderFakeReviews() {
+            const names = [
+                "Rahul Kumar", "Priya Sharma", "Amit Singh", "Sneha Gupta", "Vikram J.",
+                "Anjali M.", "Rohit Verma", "Kavita R.", "Deepak Patel", "Sandeep K.",
+                "Neha D.", "Arjun Reddy", "Manish Tiwari", "Riya Sen", "Karan Johar",
+                "Suresh Raina", "Meera Rajput", "Varun Dhawan", "Pooja Hegde", "Kabir Singh"
+            ];
+
+            const positiveTexts = [
+                "Amazing product! Totally worth the price.",
+                "Delivery was very fast, got it in 2 days.",
+                "Quality is superb, exactly as shown in picture.",
+                "Best deal I found online. Highly recommended!",
+                "Loved it! Packaging was also good.",
+                "Value for money. Go for it guys.",
+                "Product is genuine. Happy with purchase.",
+                "Excellent performance and looks premium.",
+                "Superb quality at this price point.",
+                "Nice product, very useful and durable.",
+                "Just go for it, don't think twice.",
+                "Battery backup is really good.",
+                "Camera quality is awesome.",
+                "Got it at a very cheap price during sale.",
+                "My brother loved this gift.",
+                "Original product received. Thanks!",
+                "Smooth interface and great display.",
+                "Build quality is very strong.",
+                "Fastest delivery ever seen.",
+                "Satisfied customer here."
+            ];
+
+            let container = document.getElementById("fakeReviewsContainer");
+            container.innerHTML = "";
+
+            // Loop for 10 reviews
+            for (let i = 0; i < 10; i++) {
+                let rName = names[Math.floor(Math.random() * names.length)];
+                let rText = positiveTexts[Math.floor(Math.random() * positiveTexts.length)];
+                let rRating = Math.random() > 0.2 ? "5" : "4"; // Mostly 5 stars, sometimes 4
+                let rDate = Math.floor(Math.random() * 20) + 1 + " days ago"; // Random date within 20 days
+
+                let div = document.createElement("div");
+                div.className = "review-item";
+                div.innerHTML = `
+                <div class="r-header">
+                    <div class="r-star">${rRating} ★</div>
+                    <div class="r-name">${rName}</div>
+                </div>
+                <div class="r-text">${rText}</div>
+                <div class="r-footer">
+                    <div class="r-check">
+                        <svg viewBox="0 0 12 12"><path d="M4 9l-3-3 1.5-1.5L4 6l5-5 1.5 1.5z"></path></svg>
+                        Certified Buyer
+                    </div>
+                    <div>${rDate}</div>
+                </div>
+            `;
+                container.appendChild(div);
+            }
+        }
+
+        function render(p) {
+            if (!p) p = fallbackProduct;
+
+            document.getElementById("dTitle").innerText = p.name || p.title || "Product";
+            document.getElementById("dSp").innerText = inr(p.selling_price || p.price || 0);
+            document.getElementById("dMrp").innerText = inr(p.mrp || 0);
+            document.getElementById("bottomBuyPrice").innerHTML = "at " + inr(p.selling_price || p.price || 0);
+
+            let mrp = Number(p.mrp || 0),
+                sp = Number(p.selling_price || p.price || 0);
+            if (mrp > sp && mrp > 0) document.getElementById("dDisc").innerText = Math.round(((mrp - sp) / mrp) * 100) + "% off";
+
+            document.getElementById("dDesc").innerText = p.description || p.details || p.name;
+
+            let imgs = [];
+            if (Array.isArray(p.images) && p.images.length) imgs = p.images;
+            else if (p.image) imgs = [p.image];
+            else {
+                for (let k = 1; k <= 5; k++)
+                    if (p["img" + k]) imgs.push(p["img" + k]);
+            }
+            imgs = imgs.filter(Boolean).map(fixUrl);
+            if (!imgs.length) imgs = ["./images/product.png"];
+
+            let cInner = document.getElementById("carouselWrapper");
+            let cInd = document.getElementById("carouselIndicators");
+            let tBox = document.getElementById("thumbWrapper");
+            let dImgs = document.getElementById("detailImages");
+            cInner.innerHTML = "";
+            cInd.innerHTML = "";
+            tBox.innerHTML = "";
+            dImgs.innerHTML = "";
+
+            imgs.forEach((url, i) => {
+                let item = document.createElement("div");
+                item.className = "carousel-item" + (i === 0 ? " active" : "");
+                item.innerHTML = `<img src="${url}" alt="Slide">`;
+                cInner.appendChild(item);
+
+                let btn = document.createElement("button");
+                btn.type = "button";
+                btn.dataset.bsTarget = "#productCarousel";
+                btn.dataset.bsSlideTo = i;
+                if (i === 0) btn.className = "active";
+                cInd.appendChild(btn);
+
+                let th = document.createElement("div");
+                th.className = "thumb-item" + (i === 0 ? " active" : "");
+                th.innerHTML = `<img src="${url}">`;
+                th.onclick = function () {
+                    let el = document.getElementById('productCarousel');
+                    let inst = bootstrap.Carousel.getOrCreateInstance(el);
+                    inst.to(i);
+                };
+                tBox.appendChild(th);
+
+                let fullImg = document.createElement("img");
+                fullImg.src = url;
+                fullImg.className = "f-img-item";
+                dImgs.appendChild(fullImg);
+            });
+
+            // Clear detail section
+            dImgs.innerHTML = "";
+
+            // --- Product Videos (video1, video2, video3...) ---
+            let videoSection = document.getElementById("videoSection");
+            let videoContainer = document.getElementById("videoContainer");
+
+            videoContainer.innerHTML = "";
+
+            let videos = [];
+
+            // Collect video1, video2, video3 dynamically
+            for (let i = 1; i <= 10; i++) {
+                if (p["video" + i]) {
+                    videos.push(p["video" + i]);
+                }
+            }
+
+            if (videos.length > 0) {
+                videoSection.style.display = "block";
+
+                videos.forEach(link => {
+                    let videoDiv = document.createElement("div");
+                    videoDiv.className = "video-item";
+
+                    videoDiv.innerHTML = `
+            <video controls playsinline preload="metadata">
+                <source src="${link}" type="video/mp4">
+            </video>
+        `;
+
+                    videoContainer.appendChild(videoDiv);
+                });
+
+            } else {
+                videoSection.style.display = "none";
+            }
+
+            // Show product specific detail image
+            if (p.detailImage) {
+                let fullImg = document.createElement("img");
+                fullImg.src = p.detailImage;
+                fullImg.className = "f-img-item";
+                dImgs.appendChild(fullImg);
+            }
+
+            let feats = p.features || p.fetaures || p.highlights || "";
+            if (typeof feats === "string") feats = feats.split(/[|,\n]/).filter(s => s.trim());
+            let fUl = document.getElementById("dFeatures");
+            fUl.innerHTML = "";
+            if (feats.length) {
+                feats.forEach(f => {
+                    let li = document.createElement("li");
+                    li.className = "f-item";
+                    li.innerHTML = `<div class="f-dot"></div><div>${f}</div>`;
+                    fUl.appendChild(li);
+                });
+                document.getElementById("featureSection").style.display = "block";
+            } else {
+                document.getElementById("featureSection").style.display = "none";
+            }
+
+            let el = document.getElementById('productCarousel');
+            let myCarousel = bootstrap.Carousel.getOrCreateInstance(el, {
+                interval: 2000,
+                ride: 'carousel',
+                wrap: true,
+                touch: true
+            });
+            myCarousel.cycle();
+
+            el.addEventListener('slide.bs.carousel', function (e) {
+                let idx = e.to;
+                document.querySelectorAll('.thumb-item').forEach((t, n) => {
+                    t.className = "thumb-item" + (n === idx ? " active" : "");
+                });
+            });
+        }
+
+        async function load() {
+            initTimer();
+            renderFakeReviews();
+
+            let pid = getParam("productId") ||
+                getParam("id") ||
+                localStorage.getItem("selectedProductId");
+
+            try {
+                let res = await fetch("js/products.json");
+                if (!res.ok) throw new Error("File not found");
+
+                let data = await res.json();
+                let arr = Array.isArray(data) ? data : (data.products || []);
+
+                let adminProducts = JSON.parse(localStorage.getItem("adminProducts") || "[]");
+                arr = [...arr, ...adminProducts];
+
+                if (!arr.length) throw new Error("Empty");
+
+                let prod = null;
+                if (pid) prod = arr.find(x => String(x.id) == String(pid));
+
+                if (!prod) {
+                    let local = safeParse(localStorage.getItem("selectedProduct"));
+                    if (local && String(local.id) == String(pid)) {
+                        prod = local;
+                    }
+                }
+
+                let finalP = prod || arr[0];
+
+                render(finalP);
+                renderSimilar(arr, finalP.id);
+                renderReviewImage(finalP);   // ✅ MOVE HERE
+
+            } catch (e) {
+                render(fallbackProduct);
+                renderReviewImage(fallbackProduct); // ✅ Also here
+            }
+        }
+
+
+
+        window.onload = load;
+
+
+
+
+
+        function renderReviewImage(product) {
+
+            let container = document.getElementById("reviewImageContainer");
+
+            if (!container) return;
+
+            if (product.reviewImage) {
+                container.innerHTML = `
+            <div class="review-image-box">
+                <img src="${product.reviewImage}" class="review-main-img">
+                
+            </div>
+        `;
+            } else {
+                container.innerHTML = "";
+            }
+        }
+    </script>
+    <script>const wowPrice = Math.floor(product.selling_price * 0.95);
+        const discountPercent = product.mrp > product.selling_price
+            ? Math.round(((product.mrp - product.selling_price) / product.mrp) * 100)
+            : 0;</script>
+    <script src="js/scriptp.js"></script>
+
+    <script>
+        // Function to highlight selected size
+        function selectSize(element) {
+            document.querySelectorAll('.size-option').forEach(opt => opt.classList.remove('selected'));
+            element.classList.add('selected');
+        }
+
+        // Function to open/close the size chart image
+        function toggleSizeChart() {
+            const modal = document.getElementById('sizeChartModal');
+            if (modal.style.display === "none" || modal.style.display === "") {
+                modal.style.display = "flex";
+                document.body.style.overflow = "hidden"; // Stop scrolling background
+            } else {
+                modal.style.display = "none";
+                document.body.style.overflow = "auto"; // Resume scrolling
+            }
+        }
+
+
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const params = new URLSearchParams(window.location.search);
+            const productId = params.get("productId");
+
+            if (!productId) return;
+
+            fetch("./js/products.json?v=" + Date.now())
+                .then(res => res.json())
+                .then(products => {
+
+                    const product = products.find(p => p.id == productId);
+
+                    if (!product) return;
+
+                    // Calculate WOW price same as index
+                    const wowPrice = Math.floor(product.selling_price * 0.95);
+
+                    // Replace Buy Price Text
+                    const buyElement = document.querySelector(".buy-wow-price");
+                    if (buyElement) {
+                        buyElement.textContent = `Buy at ₹${wowPrice}`;
+                    }
+
+                })
+                .catch(err => console.error(err));
+        });
+    </script>
+    <script>
+        document.addEventListener("contextmenu", e => e.preventDefault());
+        document.onkeydown = function (e) {
+            if (e.keyCode == 123) return false;
+        };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,508 @@
+/* 1. Reset & Base Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, Arial, sans-serif;
+    background-color: #f1f3f6;
+}
+
+/* 2. Navbar Section */
+.navbar {
+    background-color: #ffffff;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px 0 4px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    gap: 10px;
+}
+
+.saleBar {
+      background: #fff;
+      margin: 10px 12px 0;
+      padding: 10px 15px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      border: 1px solid #ffe4e6
+    }
+
+    .saleLabel {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 800;
+      color: #e11d48
+    }
+
+    .liveDot {
+      width: 8px;
+      height: 8px;
+      background: #e11d48;
+      border-radius: 50%;
+      animation: blink 1s infinite
+    }
+
+    @keyframes pulse-red {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(225, 29, 72, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(225, 29, 72, 0);
+  }
+}
+
+
+
+/* --- BLINKING LIGHT ANIMATION --- */
+.liveDot {
+    width: 10px;
+    height: 10px;
+    background: #e11d48;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+    animation: pulse-red 1.5s infinite;
+}
+
+@keyframes pulse-red {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(225, 29, 72, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(225, 29, 72, 0); }
+}
+
+.saleBar {
+    background: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+}
+
+     .timerWrap {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: #4b5563;
+      font-weight: 600
+    }
+
+    #timer {
+      color: #111;
+      font-weight: 900;
+      font-family: monospace;
+      font-size: 14px;
+      background: #f3f4f6;
+      padding: 2px 6px;
+      border-radius: 4px
+    }
+
+.ham {
+    width: 25px; 
+    height: 25px;
+    flex-shrink: 0;
+}
+
+.logo-container img {
+    padding-left: -15px;
+    height: 45px;
+    width: auto;
+    display: block;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.nav-right img {
+    width: 24px; 
+    height: 24px;
+    object-fit: contain;
+}
+
+.nav-action {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.login-text {
+    font-size: 17px;
+    font-weight: 500;
+    color: #0c0c0c;
+}
+
+/* 3. Search & Location Bar */
+.sub-header {
+    background-color: #ffffff;
+    padding-bottom: 12px;
+   
+}
+
+.location-bar {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    
+}
+
+.loc-left {
+    display: flex;
+    align-items: center;
+    gap: 6px; /* Space between Pin, Black Text, and Blue Group */
+    cursor: pointer;
+}
+
+.loc-text-bold {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: #212121;
+}
+
+.loc-group-link {
+    display: flex;
+    align-items: center;
+    gap: 2px; /* Keeps chevron attached to blue text */
+}
+
+.loc-text-blue {
+    font-size: 11.5px;
+    color: #0b4094;
+    font-weight: 530;
+}
+
+.chevron-right {
+    display: block;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 1.6px solid #63aaed;
+    border-radius: 10px;
+    padding: 8px 14px;
+    height: 42px;
+    margin: 0 12px;
+}
+
+.search-input {
+   
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    font-size: 13.2px;
+}
+
+/* 4. Carousel Section */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    padding: 0px 0;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.carousel-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.carousel-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-slide {
+    min-width: 100%; 
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto; 
+    object-fit: contain;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.dot {
+    height: 4px;
+    width: 8px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+}
+
+.dot.active {
+    background-color: #212121;
+    width: 35px;
+}
+
+/* 5. Optimized Category Grid */
+.category-grid-container {
+    display: grid;
+    grid-template-rows: repeat(2, 95px); 
+    grid-auto-columns: 55px; 
+    grid-auto-flow: column dense; 
+    background-color: white;
+   
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.category-grid-container::-webkit-scrollbar {
+    display: none;
+}
+
+.minutes-wide {
+    grid-column: span 2; 
+    grid-row: 1; 
+    width: 168px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.wide-box {
+    width: 110px;
+    height: 42px;
+    background: linear-gradient(90deg, #FFF9C4 0%, #FFEB3B 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+}
+
+.circle-container {
+    width: 56px;
+    height: 56px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4px;
+}
+
+.circle-container img {
+    width: 75%;
+    height: 75%;
+    object-fit: contain;
+}
+
+.category-item span {
+    font-size: 11px;
+    color: #212121;
+    text-align: center;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.loc-blue-group{
+    align-items: center;
+    display: flex;
+    gap: 0px;
+}
+
+
+/* --- NEW UPGRADED PRODUCT SECTION STYLING --- */
+        .products-section {
+            background-color: #f1f3f6;
+            padding: 4px 0;
+            margin-top: 4px;
+        }
+
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            background: #fff;
+        }
+
+        .product-card {
+            background: #fff;
+            width: 50%; /* Exactly 2 columns */
+            border: 0.5px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        /* Bestseller Tag & Wishlist */
+        .tag-bestseller {
+            position: absolute;
+            top: 0; left: 0;
+            background: #05ab58;
+            color: white;
+            font-size: 9px;
+            font-weight: bold;
+            padding: 2px 6px;
+            z-index: 2;
+        }
+
+        .wishlist-heart {
+            position: absolute;
+            top: 8px; right: 8px;
+            color: #d1d1d1;
+            font-size: 20px;
+            z-index: 2;
+        }
+
+        .img-container {
+            width: 100%;
+            height: 180px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .img-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .product-info {
+            padding: 0 10px 10px 10px;
+            flex-grow: 1;
+        }
+
+        .sponsored-label {
+            font-size: 11px;
+            color: #878787;
+            margin-bottom: 2px;
+        }
+
+        .product-name {
+            font-size: 13px;
+            color: #212121;
+            line-height: 1.3;
+            height: 34px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+        .rating-row {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            margin: 5px 0;
+        }
+        .stars { color: #0e5d12; font-size: 18px; }
+        .assured-badge { height: 16px; padding-left: 6px; }
+
+        .price-row {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .price-down-arrow { color: #388e3c; font-weight: bold; font-size: 12px; }
+        .selling-price { font-size: 12px; font-weight: 700; color: #212121; }
+        .mrp { text-decoration: line-through; color: #878787; font-size: 12px; }
+
+        .wow-offer {
+         font-size: 12px;
+         color: #042e71;
+         font-weight: 500;
+         margin-top: 4px;
+         display: flex;
+         align-items: center; /* This keeps the image and text aligned */
+         gap: 6px;
+}
+
+         .wow-img {
+         height: 14px; /* Adjust this height to match your text size */
+         width: auto;
+         object-fit: contain;
+}
+        .wow-pill {
+            background: #2874f0;
+            color: white;
+            padding: 0 3px;
+            font-size: 10px;
+            border-radius: 2px;
+        }
+
+        .delivery-express {
+            font-size: 12px;
+            font-weight: 500;
+            margin-top: 6px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* The "Add to Cart" Button */
+        .add-to-cart-btn {
+            
+            margin: 0px 10px 10px 10px;
+            background: #fff;
+            border: 1px solid #2874f0;
+            color: #04255b;
+            padding: 4px 0;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 14px;
+            text-align: center;
+            cursor: pointer;
+        }
+    

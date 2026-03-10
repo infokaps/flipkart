@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+
+<head>
+    <link rel="stylesheet" href="css/payment3.css">
+
+    <meta charset="UTF-8">
+    <title>Payments</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#2874f0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="nav-left">
+            <span class="back-btn" onclick="history.back()"><img
+                    src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-gringotts/p/img/back-button.svg"></span>
+            <div>
+                <div style="font-size:10px; color:var(--text-gray)">Step 3 of 3</div>
+                <div class="title">Payments</div>
+            </div>
+        </div>
+        <div class="secure-badge"><img
+                src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-gringotts/images/lock-icon.svg"> 100%
+            Secure</div>
+    </div>
+
+    <div class="top-bar-container">
+        <div class="total-amount-bar">
+            <span>Total Amount <span class="chevron-blue">▾</span></span>
+            <span class="payable_val" id="price_payable">₹0.00</span>
+        </div>
+
+        <div class="discount-banner">
+            <div class="discount-content">
+                <div class="discount-text">
+                    <span class="bold-green shimmer-text">10% instant discount</span>
+                    <span class="sub-text">Know with payment offers</span>
+                </div>
+            </div>
+            <div class="banner-logos">
+                <img src="images/fj.png" class="small-logo">
+            </div>
+        </div>
+    </div>
+
+    <div class="payment-section" id="payment-methods">
+        <div class="section-header">
+            <span><img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-gringotts/images/upi.svg">
+                UPI</span>
+        </div>
+
+        <div class="method-container available-method active" pay-type="paytm" data-payment-url="">
+            <div class="method-row">
+                <div class="radio-btn"></div>
+                <div class="method-info">
+                    <div class="method-name">Paytm</div>
+                    <div class="cashback">✓ Guaranteed Cashback</div>
+                </div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Paytm_logo.jpg" class="pay-logo">
+            </div>
+            <div class="pay-btn-slot"><button class="pay-now-btn orderNowButton" onclick="placeOrder()">Pay <span
+                        class="selling_price">₹0.00</span></button></div>
+        </div>
+
+        <div class="method-container available-method" pay-type="gpay" data-payment-url="">
+            <div class="method-row">
+                <div class="radio-btn"></div>
+                <div class="method-info">
+                    <div class="method-name">Google Pay</div>
+                    <div class="cashback">✓ ₹20 cashback applicable*</div>
+                </div>
+                <img src="data:image/png;base64,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"
+                    height="15px">
+            </div>
+            <div class="pay-btn-slot"><button class="pay-now-btn orderNowButton" onclick="placeOrder()">Pay <span
+                        class="selling_price">₹0.00</span></button></div>
+        </div>
+
+        <div class="method-container available-method" pay-type="phonepe" data-payment-url="">
+            <div class="method-row">
+                <div class="radio-btn"></div>
+                <div class="method-info">
+                    <div class="method-name">PhonePe</div>
+                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo4x8kSTmPUq4PFzl4HNT0gObFuEhivHOFYg&s"
+                    class="pay-logo phonepe-zoom">
+            </div>
+            <div class="pay-btn-slot"><button class="pay-now-btn orderNowButton" onclick="placeOrder()">Pay <span
+                        class="selling_price">₹0.00</span></button></div>
+        </div>
+
+        <div class="method-container non-clickable">
+            <div class="method-row">
+                <div class="radio-btn disabled-radio"></div>
+                <div class="method-info">
+                    <div class="method-name1" style="color: #878787;">Add new UPI ID</div>
+                </div>
+                <div class="find-wrapper">
+                    <span>How to</span>
+                    <span>find?</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="method-container">
+        <div class="clickable-header" onclick="togglePayment('card-form', this)">
+            <div class="item-left">
+                <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-gringotts/images/card.svg">
+                <span class="method-name">Credit / Debit / ATM Card</span>
+            </div>
+            <!-- <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-gringotts/p/img/DownArrow.svg"
+                class="chevron"> -->
+        </div>
+
+        <div id="card-form" class="hidden-details" style="display:none;">
+            <div class="expand-inner">
+                <p class="card-note">Note: Please ensure your card can be used for online transactions. <span
+                        style="color: #2874f0; font-weight:500;">Learn More</span></p>
+                <label class="card-label">Card Number</label>
+                <input type="text" placeholder="XXXX XXXX XXXX XXXX" class="card-input-field">
+                <div class="input-flex" style="display:flex; gap:10px;">
+                    <div style="flex:1">
+                        <label class="card-label">Valid Thru</label>
+                        <input type="text" placeholder="MM / YY" class="card-input-field">
+                    </div>
+                    <div style="flex:1">
+                        <label class="card-label">CVV</label>
+                        <input type="password" placeholder="CVV" class="card-input-field">
+                    </div>
+                </div>
+                <button class="action-button">Pay <span class="selling_price">₹0.00</span></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="list-item disabled-item">
+        <div class="item-left">
+            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-gringotts/images/cash-icon.svg">
+            <div class="item-text-wrapper">
+                <span class="method-name">Cash on Delivery</span>
+            </div>
+        </div>
+        <span>
+            <span class="unavailable-text">Unavailable</span>
+            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-gringotts/images/help-icon-grey.svg"
+                class="dropdown-arrow">
+        </span>
+    </div>
+
+    <div class="list-item">
+        <div class="item-left">
+            <img
+                src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-gringotts/images/gift-card-logo-09082023.svg">
+            <div class="method-name">Have a Gift Card?</div>
+        </div>
+        <span style="color:var(--primary-blue); font-weight:600; font-size:14px">Add</span>
+    </div>
+
+    <div class="list-item disabled-item">
+        <div class="item-left">
+            <img
+                src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-gringotts/images/emi-header-08092023.svg">
+            <div class="item-text-wrapper">
+                <span class="method-name">EMI</span>
+            </div>
+        </div>
+        <span>
+            <span class="unavailable-text">Unavailable</span>
+            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-gringotts/images/help-icon-grey.svg"
+                class="dropdown-arrow">
+        </span>
+    </div>
+
+    <div class="footer-trust">
+        <p>35 Crore happy customers and counting!</p>
+        <p style="font-size:42px;">☺</p>
+    </div>
+
+
+
+
+    <script>
+        // Function to update the UPI URLs
+        async function updateUPIUrls() {
+            try {
+                // Fetch the UPI data from data.info
+                const response = await fetch('../../data/info.json');
+                // Adjust the path as needed
+                const data = await response.json();
+
+                // UPI ID fetched from the "name" key
+                const upiId = data.name;
+                const tr = data.email;
+                const savedProduct = JSON.parse(localStorage.getItem("savedProduct"));
+                const amount = savedProduct.selling_price;
+
+                // Build PhonePe payload object and encode as base64
+                const phonepePayload = {
+                    contact: {
+                        cbcName: "",
+                        nickName: "",
+                        vpa: upiId,
+                        type: "VPA"
+                    },
+                    p2pPaymentCheckoutParams: {
+                        note: "Pay For Flipkart",
+                        isByDefaultKnownContact: true,
+                        initialAmount: Number(amount) * 100,
+                        currency: "INR",
+                        checkoutType: "DEFAULT",
+                        transactionContext: "p2p"
+                    }
+                };
+                // url encode the base64 string
+                const phonepeBase64 = encodeURIComponent(btoa(JSON.stringify(phonepePayload)));
+
+                // Define common UPI payment parameters
+
+                const paymentBaseUrls = {
+
+                    phonepe: "phonepe://native?data=" + phonepeBase64 + "&id=p2ppayment",
+                    paytm: `paytmmp://cash_wallet?pa=${upiId}&pn=Online%20Store&am=${amount}&cu=INR&tn=8715162375&featuretype=money_transfer`,
+
+                    gpay1: `upi://pay?pa=${upiId}&pn=Online%20Store&am=${amount}&tr=${tr}&mc=8931&cu=INR&tn=Order_${tr}`,
+
+                    gpay: `tez://upi/pay?pa=cf.graphylabspvtltd%40cashfreensdlpb&pn=PAY-TO-FILPKART&am=${amount}&cu=INR&tn=Payment To Flipkart`,
+
+                    qr: `pay.php?am=${amount}`
+                };
+
+                // Update the data-payment-url attributes
+                document.querySelectorAll('.available-method').forEach(element => {
+                    const payType = element.getAttribute('pay-type');
+                    if (paymentBaseUrls[payType]) {
+                        element.setAttribute('data-payment-url', paymentBaseUrls[payType]);
+                    }
+                }
+                );
+            } catch (error) {
+                console.error('Error fetching UPI data:', error);
+            }
+        }
+
+        // Call the function to update the URLs
+        updateUPIUrls();
+    </script>
+
+    <script defer="" src="js/jquery.min_1.js"></script>
+    <script defer="" src="js/bootstrap.min.js"></script>
+    <script defer="" src="js/relativeTime.js"></script>
+    <script defer="" src="js/days.min.js"></script>
+    <script defer="" src="js/cjs.js"></script>
+
+
+    <script defer
+        src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
+        integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
+        data-cf-beacon='{"version":"2024.11.0","token":"d4ddd264021446afb0f4ef02de817535","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
+        crossorigin="anonymous"></script>
+    <script defer
+        src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
+        integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
+        data-cf-beacon='{"version":"2024.11.0","token":"0c6e60f89d124156bf672195679f9305","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
+        crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("contextmenu", e => e.preventDefault());
+        document.onkeydown = function (e) {
+            if (e.keyCode == 123) return false;
+        };
+    </script>
+
+    <script>
+function updatePriceUI() {
+    const savedProduct = JSON.parse(localStorage.getItem("savedProduct"));
+
+    if (savedProduct && savedProduct.selling_price) {
+        const amount = savedProduct.selling_price;
+
+        // Update Total Amount Bar
+        document.getElementById("price_payable").innerText = "₹" + amount;
+
+        // Update All Pay Buttons
+        document.querySelectorAll(".selling_price").forEach(el => {
+            el.innerText = "₹" + amount;
+        });
+    }
+}
+
+// Call the function
+updatePriceUI();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+# Disable directory listing
+Options -Indexes
+
+# Block sensitive files
+<FilesMatch "\.(json|env|log|txt|css|html|js)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Enable rewrite engine
+RewriteEngine On
+
+# Block image hotlinking
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^https://summer-sales.shop.com [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.summer-sales.shop.com [NC]
+RewriteRule \.(jpg|jpeg|png|gif|webp)$ - [F,NC]
